@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void aksiKlik(int posisition) {
                 //cara berpindah activity/halaman
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("idPlayer", players.get(posisition).getIdPlayer());
                 startActivity(intent);
             }
         });
